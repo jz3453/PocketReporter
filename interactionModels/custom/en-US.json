@@ -1,0 +1,691 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pocket reporter",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "Help me please",
+            "Help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "I\u0027m good",
+            "that\u0027s enough"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GetNews",
+          "slots": [
+            {
+              "name": "Topics",
+              "type": "TOPICS",
+              "samples": [
+                "I want to hear about {Topics}",
+                "{Topics}"
+              ]
+            },
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES"
+            }
+          ],
+          "samples": [
+            "What\u0027s the latest on {Topics}",
+            "Do you know what\u0027s happening in {Topics}",
+            "What\u0027s the latest news in {Topics}",
+            "What\u0027s going on in {Topics}",
+            "I want to hear about {Topics}",
+            "what\u0027s the most recent news on {Topics}",
+            "what\u0027s the most recent news about {Topics}",
+            "can I hear news about {Topics} from {NewsSource}",
+            "can I hear news about {Topics}",
+            "{Topics} from {NewsSource}",
+            "{Topics} ",
+            "I would like to hear about {Topics} from {NewsSource}",
+            "I would like to hear about {Topics}",
+            "can I hear about news in {Topics}",
+            "Can you read me headlines in {Topics}",
+            "Can you read me headlines in {Topics} from {NewsSource}",
+            "Can I hear about {Topics} from {NewsSource}",
+            "Can I hear news in {Topics}",
+            "Can I hear about {Topics}"
+          ]
+        },
+        {
+          "name": "ChangeTopics",
+          "slots": [
+            {
+              "name": "Topics",
+              "type": "TOPICS"
+            },
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES"
+            }
+          ],
+          "samples": [
+            "actually can I hear about {Topics} ",
+            "actually can I hear about {Topics} instead",
+            "I would like to change the topic",
+            "I would like to hear about a different topic",
+            "Can I change the topic",
+            "Can I change the topic to {Topics}",
+            "change the topic to {Topics}",
+            "can I hear about a different topic ",
+            "can you read me news about a different from {NewsSource}",
+            "can I hear about a different topic from {NewsSource}",
+            "I change my mind read me news about {Topics}",
+            "I change my mind tell me about {Topics}",
+            "actually change the topic to {Topics}",
+            "can I hear about {Topics} instead",
+            "can I hear about {Topics} from {NewsSource} instead"
+          ]
+        },
+        {
+          "name": "ChangeSource",
+          "slots": [
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES"
+            },
+            {
+              "name": "Topics",
+              "type": "TOPICS"
+            }
+          ],
+          "samples": [
+            "I would like to hear from another news source",
+            "Can I hear from another news source",
+            "Can I hear from another source",
+            "Can I change the source to {NewsSource}",
+            "I would like to change the source to {NewsSource}",
+            "I would like to change the source",
+            "Wait I want to hear from {NewsSource}",
+            "change the source to {NewsSource}",
+            "can I hear from {NewsSource} instead",
+            "actually can I hear from {NewsSource} instead"
+          ]
+        },
+        {
+          "name": "ListSupportedTopics",
+          "slots": [
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES"
+            }
+          ],
+          "samples": [
+            "What are other topics",
+            "What are the choices of topics",
+            "Can you give me the list of topics",
+            "What are the choices of topics from {NewsSource}",
+            "List the topics from {NewsSource} ",
+            "Can you give me the list of topics from {NewsSource}",
+            "what topics does {NewsSource} support",
+            "what are the topics that {NewsSource} offers"
+          ]
+        },
+        {
+          "name": "EditFavorites",
+          "slots": [
+            {
+              "name": "Action",
+              "type": "ACTIONS"
+            },
+            {
+              "name": "Topic",
+              "type": "TOPICS"
+            },
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES"
+            }
+          ],
+          "samples": [
+            "can you {Action} from my favorites",
+            "can you {Action} that to my favorites",
+            "{Action} {Topic} from {NewsSource}",
+            "{Action} {Topic} from {NewsSource} to favorites",
+            "{Action} {Topic} from {NewsSource} from favorites",
+            "{Action} from favorites",
+            "{Action} to favorites"
+          ]
+        },
+        {
+          "name": "ListAllTopics",
+          "slots": [],
+          "samples": [
+            "what are my choices",
+            "what\u0027s available for me to listen to",
+            "what can I listen to",
+            "What topic should I listen to",
+            "I\u0027m not sure what to listen to",
+            "can I hear the full list of topics",
+            "can you read me the full list of topics",
+            "can you list all your topics",
+            "list all topics",
+            "what kinds of news are available",
+            "what news topics are available",
+            "what news topics do you offer",
+            "what are examples of news topics I can hear about",
+            "can you give me examples of what topics I can hear from",
+            "can you give me a list of what topics I can hear from",
+            "what are all the topics you can read from",
+            "what kinds of news do you offer",
+            "what kinds of news do you read",
+            "what is there to hear about",
+            "what can I hear about",
+            "what topics can you read from",
+            "what topics do you offer",
+            "what topics can I hear from",
+            "what topics do you support"
+          ]
+        },
+        {
+          "name": "UseInstructions",
+          "slots": [],
+          "samples": [
+            "I\u0027m lost",
+            "can you please direct me",
+            "what can you do again",
+            "can you explain how to use this again",
+            "can you repeat the instructions",
+            "can you read me instructions on how to use this",
+            "can you give me instructions ",
+            "I\u0027m a little lost on how to use this",
+            "What can I do ",
+            "I\u0027m not sure what to do",
+            "How do I use this"
+          ]
+        },
+        {
+          "name": "GetDebriefing",
+          "slots": [],
+          "samples": [
+            "start my debriefing",
+            "what\u0027s my debrief",
+            "give me my debrief",
+            "debrief me"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Good News",
+                "synonyms": [
+                  "good news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Celebrity News",
+                "synonyms": [
+                  "celebrity tea",
+                  "celebrity gossip"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Arts"
+              }
+            },
+            {
+              "name": {
+                "value": "Fashion",
+                "synonyms": [
+                  "fashion news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Sports",
+                "synonyms": [
+                  "sports news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Science",
+                "synonyms": [
+                  "science news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Travel",
+                "synonyms": [
+                  "travel news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Entertainment",
+                "synonyms": [
+                  "entertainment news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Technology",
+                "synonyms": [
+                  "technology news",
+                  "tech"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Business",
+                "synonyms": [
+                  "business news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Top Stories"
+              }
+            },
+            {
+              "name": {
+                "value": "Health",
+                "synonyms": [
+                  "health news"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "World News"
+              }
+            },
+            {
+              "name": {
+                "value": "US News"
+              }
+            },
+            {
+              "name": {
+                "value": "Politics",
+                "synonyms": [
+                  "politics news"
+                ]
+              }
+            }
+          ],
+          "name": "TOPICS"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "ESPN",
+                "synonyms": [
+                  "e. s. p. n.",
+                  "ESPN News",
+                  "espn news",
+                  "espn sports",
+                  "espn"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Vanity Fair",
+                "synonyms": [
+                  "VF"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Wall Street Journal",
+                "synonyms": [
+                  "wsj",
+                  "wall street journal",
+                  "The Wall Street Journal",
+                  "WSJ"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "The New York Times",
+                "synonyms": [
+                  "nyt",
+                  "New York Times",
+                  "NYTimes",
+                  "NYT"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Good News Network"
+              }
+            },
+            {
+              "name": {
+                "value": "TMZ",
+                "synonyms": [
+                  "tmz"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "NBC News",
+                "synonyms": [
+                  "C News",
+                  "c news",
+                  "nbc news",
+                  "nbc",
+                  "NBC"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "CNN News",
+                "synonyms": [
+                  "N News",
+                  "n news",
+                  "c. n. n. news",
+                  "cnn news",
+                  "cnn",
+                  "CNN"
+                ]
+              }
+            }
+          ],
+          "name": "NEWS_SOURCES"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "remove",
+                "synonyms": [
+                  "Remove",
+                  "Delete"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "add",
+                "synonyms": [
+                  "Add"
+                ]
+              }
+            }
+          ],
+          "name": "ACTIONS"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetNews",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Topics",
+              "type": "TOPICS",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1061833577231.977100254512"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.437875150202.247602728590.28291092983"
+                }
+              ]
+            },
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "EditFavorites",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Action",
+              "type": "ACTIONS",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.183022354986.1104850223258"
+              }
+            },
+            {
+              "name": "Topic",
+              "type": "TOPICS",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "ListSupportedTopics",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.654714750235.1567309215194"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ChangeTopics",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Topics",
+              "type": "TOPICS",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1332568344665.396318242392.566499145577"
+                }
+              ]
+            },
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1332568344665.183557701277.1639137189852"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ChangeSource",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "NewsSource",
+              "type": "NEWS_SOURCES",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.308626855364.306976215857.210808145746"
+                }
+              ]
+            },
+            {
+              "name": "Topics",
+              "type": "TOPICS",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1061833577231.977100254512",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What topic would you like to hear about?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.780285660575.862332281455",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what topic?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.654714750235.1567309215194",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What news source?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.183022354986.1104850223258",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Add or remove?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.139609336972.222456891181",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.437875150202.247602728590.28291092983",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry, but I don\u0027t read about that topic. Why don\u0027t you try asking me for a full list of topics?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1332568344665.183557701277.1639137189852",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry, I don\u0027t read from there."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1332568344665.396318242392.566499145577",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Mmmm, didn\u0027t quite get that. If you\u0027re not sure what topics are supported by this news source, you can try asking me."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.308626855364.306976215857.210808145746",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I don\u0027t believe I read from there."
+          }
+        ]
+      }
+    ]
+  },
+  "version": "24"
+}
